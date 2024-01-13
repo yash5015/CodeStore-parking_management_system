@@ -1,38 +1,139 @@
+/* App.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  margin-top: 10px;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+button:hover {
+  cursor: pointer;
+}
+p > span:first-child {
+  font-weight: 500;
+  font-size: 16px;
+}
+p > span:nth-child(2) {
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+h1,
+h3 {
+  margin: 10px auto;
+}
+input {
+  border-radius: 8px;
+  padding: 6px;
+}
+.parking-lot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parking-slot-container {
+  position: relative;
+}
+
+.parking-slot {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.available {
+  background-color: lightgreen;
+}
+
+.occupied {
+  background-color: salmon;
+}
+
+.menu-button {
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.slotsArea {
+  flex: 0.78;
+}
+.slot-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  row-gap: 5px;
+}
+.slot-menu {
+  position: absolute;
+  top: 30px;
+  right: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.slot-menu button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slot-menu button:hover {
+  background-color: #f2f2f2;
 }
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.input-container div {
+  display: flex;
+  justify-content: space-between;
+}
+.dummy {
+  flex: 0.22;
+
+  position: relative;
+}
+.mainFunc-div {
+  position: fixed;
+  width: 280px;
+  height: 100%;
+  right: 0;
+  padding: 30px;
+  background-color: lightgreen;
+}
+
+.slot-details {
+  display: flex;
+  flex-direction: column;
+}
+.details-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  row-gap: 5px;
+}
+
